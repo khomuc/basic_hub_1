@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./public/icon/iconLogo.png">
+    <link rel="stylesheet" href="./public/font/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/base.css">
+    <link rel="stylesheet" href="./public/css/reset.css">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/guarantee.css">
+    <link rel="stylesheet" href="./public/css/home.css">
+    <link rel="stylesheet" href="./public/css/about.css">
+    <link rel="stylesheet" href="./public/css/profile.css">
+    <link rel="stylesheet" href="./public/css/cart.css">
+</head>
+<body onload="setCurrentOrderIndex(), addProductLocal(), showProduct(), showUser()">
+    <!-- Header -->
+    <header>
+        <div id="wrapper" class="wrapper position-fixed top-0">
+            <div class="container mt-1 mb-2">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div id="header-logo" class="col-xl-3 col-md-4">
+                        <a href="/index.html"><img class="w-75" src="./public/icon/logo.png" alt="Logo"></a>
+                    </div>
+                    <div id="header-menu" class="col-xl-4 col-xs-0 col-md-0">
+                        <nav class="nav nav-pills flex-column flex-sm-row">
+                            <a class="flex-sm-fill text-sm-center nav-link active" href="/index.html">Trang chủ</a>
+                            <a class="flex-sm-fill text-sm-center nav-link" href="/product.html">Sản phẩm</a>
+                            <a class="flex-sm-fill text-sm-center nav-link" href="/about.html">Giới thiệu</a>
+                        </nav>
+                    </div>
+                    <div id="header-search" class="col-xl-3 col-md-7">
+                        <div class="form-text">
+                            <form action="/search.html" action="" method="get">
+                                <input type="text" placeholder="Tìm kiếm..." name="key" id="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="header-cart" class="col-xl-1 col-md-0 d-flex justify-content-end">
+                        <a href="/cart.html" id="cart" class="rounded-circle text-center" style="width: 50px; height: 50px;"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div id="menu-dropdown" class="col-xl-1 col-md-0 d-flex justify-content-end position-relative">
+                        <!-- <img id="avatar" class="rounded-circle dropdown-toggle" style="width: 50px" src="./public/img/users/userLMK.jpg" alt="avatar">
+                        <ul id="sub-nav" class="position-absolute top-100 end-0">
+                            <li><a class="dropdown-item" href="/login.html"><i class="fas fa-user me-2"></i>Cá nhân</a></li>                         
+                            <li><a class="dropdown-item" href="/login.html"><i class="fas fa-sign-out-alt me-2"></i>Đăng xuất</a></li>                     
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+ 
+    <!-- Banner -->
+    <div>
+        <img class="img-fluid" src="./public/icon/banner.jpg" alt="">
+    </div>
+    <!-- End banner -->
+
+    <!-- Slider -->
+    <div class="container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide z-1 mt-3 mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-xs-12 d-flex flex-column justify-content-center align-items-start slideshow mb-2">
+                            <h3 class="text-capitalize slide-title">Bạc hà</h3>
+                            <h4 style="text-decoration:line-through; color: #666666">10.000đ</h4>
+                            <h4 class="slide-price">5.000đ</h4>
+                            <p class="slide-content">Những người yêu thích thực phẩm sạch như bạn là người truyền cảm hứng cho Tèo làm việc mỗi ngày. Những ý kiến đóng góp của bạn sẽ giúp Tèo ngày càng hoàn thiện hơn và phục vụ bạn tốt hơn! </p>
+                            <button class="btn btn-primary font-weight-bold">Thêm vào giỏ<button>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-xs-12">
+                            <a href=""><img src="./public/img/vegetables/1.jpg" class="img-fluid"alt="" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-xs-12 d-flex flex-column justify-content-center align-items-start slideshow mb-2">
+                            <h3 class="text-capitalize slide-title">Bắp cải</h3>
+                            <h4 style="text-decoration:line-through; color: #666666">10.000đ</h4>
+                            <h4 class="slide-price">5.000đ</h4>
+                            <p class="slide-content">Những người yêu thích thực phẩm sạch như bạn là người truyền cảm hứng cho Tèo làm việc mỗi ngày. Những ý kiến đóng góp của bạn sẽ giúp Tèo ngày càng hoàn thiện hơn và phục vụ bạn tốt hơn! </p>
+                            <button class="btn btn-primary font-weight-bold">Thêm vào giỏ<button>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-xs-12">
+                            <a href=""><img src="./public/img/vegetables/2.jpg" class="img-fluid"alt="" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-xs-12 d-flex flex-column justify-content-center align-items-start slideshow mb-2">
+                            <h3 class="text-capitalize slide-title">Bắp cải tím</h3>
+                            <h4 style="text-decoration:line-through; color: #666666">10.000đ</h4>
+                            <h4 class="slide-price">5.000đ</h4>
+                            <p class="slide-content">Những người yêu thích thực phẩm sạch như bạn là người truyền cảm hứng cho Tèo làm việc mỗi ngày. Những ý kiến đóng góp của bạn sẽ giúp Tèo ngày càng hoàn thiện hơn và phục vụ bạn tốt hơn! </p>
+                            <button class="btn btn-primary font-weight-bold">Thêm vào giỏ<button>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-xs-12">
+                            <a href=""><img src="./public/img/vegetables/3.jpg" class="img-fluid"alt="" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End slider -->
+
+    <!-- Categories -->
+    <div class="wrapper pt-3" style="background-color: var(--body)!important;">
+        <div class="container d-flex flex-column align-items-center">
+            <h3 class="sub-title">Sản Phẩm</h2>
+            <h2 class="title">CÁC LOẠI SẢN PHẨM CỦA TÈO</h2>
+            <div class="cate-content container categories">
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/1.jpg" alt="">
+                        <h5 class="item-name">Rau</h5>
+                        <p class="item-des">Các loại rau tươi</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/2.jpg" alt="">
+                        <h5 class="item-name">Củ</h5>
+                        <p class="item-des">Các loại củ</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/3.jpg" alt="">
+                        <h5 class="item-name">Quả</h5>
+                        <p class="item-des">Các loại quả</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/4.jpg" alt="">
+                        <h5 class="item-name">Nấm</h5>
+                        <p class="item-des">Các loại nấm</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/5.jpg" alt="">
+                        <h5 class="item-name">Bông</h5>
+                        <p class="item-des">Các loại bông</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cate-item">
+                        <img class="item-img" src="./public/img/categories/6.jpg" alt="">
+                        <h5 class="item-name">Hạt</h5>
+                        <p class="item-des">Các loại hạt</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End categories -->
+
+    <!-- Guarranty -->
+    <div class="wrapper guarantee">
+        <h3 class="sub-title text-center" style="color: var(--green)">Cam Kết</h2>
+        <h2 class="title text-center" style="color: #fff">CAM KẾT CỦA NHÀ TÈO</h2>
+        <h5 class="slogan" style="color: #fff">Nhà Tèo luôn mong muốn đem đến cho bạn những dịch vụ tốt nhất!</h5>
+        <div class="guarantee-content ms-3" style="color: #fff">
+            <div class="content-item">
+                <h4 class="guarantee-title">MIỄN PHÍ VẬN CHUYỂN</h4>
+                <p class="guarantee-des">Miễn phí giao hàng cho đơn hàng trên 500.000đ. Miễn phí giao hàng cho khách hàng thân thiết, miễn phí giao hàng nội ô Cần Thơ.</p>
+            </div>
+            <div class="content-item">
+                <h4 class="guarantee-title">THANH TOÁN DỄ DÀNG</h4>
+                <p class="guarantee-des">Thanh toán trực tiếp khi nhận hàng, thanh toán qua thẻ ngân hàng, ví điện tử.</p>
+            </div>
+            <div class="content-item">
+                <h4 class="guarantee-title">HỖ TRỢ ONLINE 24/7</h4>
+                <p class="guarantee-des">Khi có vấn đề cần trợ giúp, hãy gọi cho Tèo để được giúp đỡ. Số điện thoại 0123456789</p>
+            </div>
+        </div>
+    </div>
+    <!-- End guarranty -->
+
+    <!-- Menu -->
+    <div id="special" class="wrapper pt-3" style="background-color: var(--body)!important;">
+        <div class="container d-flex flex-column align-items-center">
+            <h3 class="sub-title">Menu</h2>
+            <h2 class="title">RAU HÔM NAY TẠI NHÀ TÈO</h2>
+            <div id="menuPr" class="cate-content container menu">
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-3">
+                    <li class="page-item ps-1 pe-1"><a class="page-link" href=""><i class="fas fa-angle-double-left"></i></a></li>
+                    <li class="page-item ps-1 pe-1 active"><a class="page-link" href="">1</a></li>
+                    <li class="page-item ps-1 pe-1"><a class="page-link" href="">2</a></li>
+                    <li class="page-item ps-1 pe-1"><a class="page-link" href="">3</a></li>
+                    <li class="page-item ps-1 pe-1"><a class="page-link" href=""><i class="fas fa-angle-double-right"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End menu -->
+
+    <!-- Footer -->
+    <div class="wrapper bg-white pt-3">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-intro">
+                    <img class="footer-intro-img mb-2" src="./public/icon/logo.png" alt="logo">
+                    <p class="footer-intro-content"><b class="footer-intro-content">Rau Nhà Tèo strore </b>là nơi chuyên cung cấp các loại rau củ quả sạch, không chất bảo quản, an toàn cho sức khỏe, đáp ứng nhu cầu của tất cả khách hàng. Rau Nhà Tèo store </b>hứa hẹn sẽ đem đến cho bạn bữa ăn an toàn và dinh dưỡng.</p>
+                    <p class="footer-intro-content">© 2021 Rau Nha Teo. All rights reserved.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-content" style="width: 40%">
+                        <h3 class="footer-nav-title">LIÊN HỆ</h3>
+                        <p class="footer-nav-link"><i class="fas fa-phone me-1"></i>0123 456 789</p>
+                        <p class="footer-nav-link"><i class="fas fa-envelope me-1"></i>raunhateo@gmail.com</p>
+                        <p class="footer-nav-link"><a href="#"><i class="fab fa-facebook-square me-1"></i>Rau Nhà Tèo store</a></p>
+                        <p class="footer-nav-link"><i class="fas fa-map-marker-alt me-1"></i>P.Xuân Khánh, Q.Ninh Kiều, Tp.Cần Thơ</p>
+                    </div>
+                    <div class="footer-nav-content">
+                        <h3 class="footer-nav-title">DANH MỤC</h3>
+                        <p class="footer-nav-link"><a href="">Trang chủ</a></p>
+                        <p class="footer-nav-link"><a href="">Sản phẩm</a></p>
+                        <p class="footer-nav-link"><a href="">Giới thiệu</a></p>
+                    </div>
+                    <div class="footer-nav-content">
+                        <h3 class="footer-nav-title">SẢN PHẨM</h3>
+                        <p class="footer-nav-link"><a href="">Rau</a></p>
+                        <p class="footer-nav-link"><a href="">Củ</a></p>
+                        <p class="footer-nav-link"><a href="">Quả</a></p>
+                        <p class="footer-nav-link"><a href="">Nấm</a></p>
+                        <p class="footer-nav-link"><a href="">Bông</a></p>
+                        <p class="footer-nav-link"><a href="">Hạt</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End footer -->
+
+    <!-- Toast messsage when adding vege to cart -->
+    <div id="toast-yes">
+        <div id="toast-yes-img" class="img"><i class="fas fa-thumbs-up"></i></div>
+        <div id="toast-yes-desc">A notification message..</div>
+    </div>
+    <div id="toast-no">
+        <div id="toast-no-img" class="img"><i class="fas fa-thumbs-down"></i></div>
+        <div id="toast-no-desc">A notification message..</div>
+    </div>
+    <!-- JQuery -->
+    <script src="./public/js/jquery.js"></script>
+
+    <!-- Javascript for Bootstrap -->
+    <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- JS menu bar -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('header').addClass('sticky');
+                }
+                else{
+                    $('header').removeClass('sticky');
+                }
+            })
+        });
+    </script>
+
+    <script src="./public/js/cart.js"></script>
+    <script src="./public/js/profile.js"></script>
+    <script src="/public/js/products.js"></script>
+    <script src="/Admin/assets/js/status.js"></script>
+    <script src="/public/js/auth.js"></script>
+</body>
+</html>

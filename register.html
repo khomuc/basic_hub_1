@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="shortcut icon" href="./public/icon/iconLogo.png">
+    <link rel="stylesheet" href="./public/css/auth.css">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/base.css">
+    <link rel="stylesheet" href="./public/css/reset.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+              <div class="card-img-left d-none d-md-flex">
+                <!-- Background image for card set in CSS! -->
+              </div>
+              <div class="card-body p-4 p-sm-5">
+                <h5 class="card-title text-center mb-5 fw-light fs-5">Đăng ký tài khoản</h5>
+                  <form name="regfr" action="login.html" method="GET" enctype="multipart/form-data"  onsubmit="return valid()">
+                    <!--registerForm-->
+                    <div class="form-floating mb-3">
+                      <input name="name" type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" style="border: 1px solid #ced4da">
+                      <label for="floatingInputUsername">Họ và tên<b style="color: red">(*)</b></label>
+                      <p id="checkName" style="color: red;"></p>
+                    </div>
+      
+                    <div class="form-floating mb-3">
+                      <input name="email" type="text" class="form-control" id="floatingInputEmail" placeholder="name@example.com" onchange="checkEmailAddress(this.value)" style="border: 1px solid #ced4da">
+                      <label for="floatingInputEmail">Địa chỉ email<b style="color: red">(*)</b></label>
+                      <p id="checkMail" style="color: red;"></p>
+                    </div>
+      
+                    <hr>
+      
+                    <div class="form-floating mb-3">
+                      <input name="mk"type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Đặt mật khẩu<b style="color: red">(*)</b></label>
+                      <p id="checkPassword" style="color: red;"></p>
+                    </div>
+      
+                    <div class="form-floating mb-3">
+                      <input name="pre_mk" type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password" >
+                      <label for="floatingPasswordConfirm">Nhập lại mật khẩu<b style="color: red">(*)</b></label>
+                      <p id="checkPrePassword" style="color: red;"></p>
+                    </div>
+      
+                    <hr>
+      
+                    <div class="form-floating mb-3">
+                      <input name="phone" type="text" class="form-control" id="floatingInputPhone" placeholder="myusername" style="border: 1px solid #ced4da">
+                      <label for="floatingInputUsername">Số điện thoại<b style="color: red">(*)</b></label>
+                      <p id="checkPhone" style="color: red;"></p>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input name="address" type="text" class="form-control" id="floatingInputAddress" placeholder="myusername" style="border: 1px solid #ced4da">
+                      <label for="floatingInputUsername">Địa chỉ<b style="color: red">(*)</b></label>
+                      <p id="checkAddress" style="color: red;"></p>
+                    </div>
+                    <hr>
+                    <div class="d-grid mb-2">
+                        <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">ĐĂNG KÝ</button>
+                    </div>
+      
+                    <a class="d-block text-center mt-2 small" href="/login.html">Bạn đã có tài khoản? Đăng nhập</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./public/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/public/js/validFormReg.js"></script>
+</body>
+</html>

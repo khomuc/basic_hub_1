@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript confirmation box</title>
+    <script>
+      // The function below will start the confirmation dialog
+      function confirmAction() {
+        let confirmAction = confirm("Are you sure to execute this action?");
+        if (confirmAction) {
+          alert("Action successfully executed");
+        } else {
+          alert("Action canceled");
+        }
+      }
+    </script>
+    <style>
+        html,
+        body {
+          height: 100%;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.8);
+          z-index: 2;
+        }
+      
+        .confirm-box {
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          top: 25%;
+          left: 25%;
+          text-align: center;
+          background: white;
+        }
+      
+        .close {
+          cursor: pointer;
+        }
+      </style>
+  </head>
+  <body>
+    <!-- <h1>Call the confirmation box</h1>
+    <button onclick="confirmAction()">Delete</button> -->
+
+    <div class="overlay" id="overlay" hidden>
+        <div class="confirm-box">
+          <div onclick="closeConfirmBox()" class="close">&#10006;</div>
+          <h2>Confirmation</h2>
+          <p>Are you sure to execute this action?</p>
+          <button onclick="isConfirm(true)">Yes</button>
+          <button onclick="isConfirm(false)">No</button>
+        </div>
+      </div>
+      <button onclick="showConfirmBox()">Delete</button>
+
+
+      <script>
+        function showConfirmBox() {
+          document.getElementById("overlay").hidden = false;
+        }
+        function closeConfirmBox() {
+          document.getElementById("overlay").hidden = true;
+        }
+      
+        function isConfirm(answer) {
+          if (answer) {
+            alert("Answer is yes");
+          } else {
+            alert("Answer is no");
+          }
+          closeConfirmBox();
+        }
+      </script>
+  </body>
+</html>
